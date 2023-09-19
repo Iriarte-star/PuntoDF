@@ -2,7 +2,7 @@ const Navbar = ()=>{
     return(
         <section className="flex justify-between p-5 ml-10 mr-10  ">
             <div className="flex gap-2 items-center">
-                <img src="/public/logo.svg" alt="" className="w-10 h-10 " />
+                <img src="logo.svg" alt="" className="w-10 h-10 " />
                 <a className="text-white text-xl font-bold">Punto<span className="text-yellow-400">DF</span></a>
             </div>
             <nav>
