@@ -3,14 +3,5 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  h1, h2, a {
-    font-family: 'Roboto Mono', monospace;
-  };
 
-  p {
-    font-family: 'Poppins', sans-serif;
-  }
-
-}
 

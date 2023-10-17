@@ -1,38 +1,34 @@
-import {  FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { BiBookmark } from "react-icons/bi";
 import { service } from "../slides";
 
-
-const Services = () =>{
-    return(
-        <section id="servicios">
-        <div className="container px-5 py-5  mx-auto ">
-          <div className="text-center mb-10 mt-20">
-            <FaLinkedinIn className="w-10 h-10 inline-block mb-4 text-cyan-400" />
-            <h1 className="sm:text-4xl text-3xl font-bold title-font text-red-700 mb-4">
-            Nuestras Actividades
-            </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            these are my skills and knowledge acquired since I entered the world of technology.
-            </p>
-          </div>
-          <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-            {service.map((skill) => (
-              <div key={skill} className="p-2 sm:w-1/2 w-full">
-                <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                  <BiBookmark className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
-                  <span className="title-font font-medium text-white">
-                    {skill}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+const Services = () => {
+  return (
+    <section id="servicios" className=" bg-teal-950 pt-16 pb-16 ">
+      <div className="container mx-auto text-center">
+        <div className="flex justify-center  gap-2 p-2">
+        < FaInstagram className="w-8 h-8 text-cyan-400  " />
+        <p className=" text-white font-light">@puntodefe</p>
         </div>
-      </section>
-    );
-
-
+        <h1 className="text-3xl sm:text-4xl font-bold text-red-600 mb-4">
+          Nuestras Actividades
+        </h1>
+        <p className="text-base md:w-2/3 mx-auto text-white font-light">
+          comprometidos biblicamente en cada una de nuestras actividades, visita nuestro perfil de instagram
+        </p>
+      </div>
+      <div className="container mx-auto mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {service.map((skill, index) => (
+            <div key={index} className=" flex flex-col  items-center  bg-white rounded-lg p-2 shadow-md">
+              <BiBookmark className="text-green-700 rounded-full w-6 h-6 mb-4 mx-auto" />
+              <p className="text-lg font-medium text-gray-800 ">{skill}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Services;
